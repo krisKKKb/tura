@@ -1,0 +1,5 @@
+n = input("Sisesta arv 1-9: ")
+nn = (2 * str(n))
+nnn = (3 * str(n))
+total = (int(n)) + (int(nn)) + (int(nnn))
+print(total)
