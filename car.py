@@ -21,3 +21,4 @@ for y in BMW:
     print(BMW["model_bmw"])
     print(BMW["year_bmw"])
     print(BMW["color_bmw"])
+    break
