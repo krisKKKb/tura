@@ -1,24 +1,26 @@
-BMW = {
-    "name_bmw": "bmw",
-    "model_bmw": "385i",
-    "year_bmw": 2009,
-    "color_bmw": "white",
+
+cars = {
+    "cars1": {
+    "name": "bmw",
+    "model": "385i",
+    "year": 2009,
+    "color": "white",
+    },
+ 
+    "cars2" : {
+    "name": "audi",
+    "model": "A4",
+    "year": 1999,
+    "color": "gray",
+    },
+    
+    "cars3" : {
+    "name": "merzedes",
+    "model": "s560",
+    "year": 2003,
+    "color": "black",
     }
-audi = {
-    "name_audi": "audi",
-    "model_audi": "A4",
-    "year_audi": 1999,
-    "color_audi": "gray",
-    }
-merzedes = {
-    "name_mer": "merzedes",
-    "model_mer": "s560",
-    "year_mer": 2003,
-    "color_mer": "black",
-    }
-for y in BMW:
-    print(BMW["name_bmw"])
-    print(BMW["model_bmw"])
-    print(BMW["year_bmw"])
-    print(BMW["color_bmw"])
+}
+for y in cars:
+    print(cars["cars1"])
     break
