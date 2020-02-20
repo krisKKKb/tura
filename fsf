@@ -1,0 +1,23 @@
+select*
+from books
+;
+
+select*
+from books where release_date >= 2010 and type = "new"
+order by title
+;
+select*
+from books where release_date <=1970 and price <=20 and type = "used"
+;
+select count(*) as "Tellimuste arv", year(order_date) as Aasta
+from orders
+Group by year(order_date)
+;
+select  sum(price) as "Müükide summa", year(order_date) as Aasta
+from orders
+left join books on books.id = orders.book_id
+group by year(order_date)
+;
+select * 
+from orders 
+left join books on books.id = orders.book_id
