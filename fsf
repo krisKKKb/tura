@@ -18,6 +18,25 @@ from orders
 left join books on books.id = orders.book_id
 group by year(order_date)
 ;
-select * 
+select sum(price) as "Aasta summa", count(*) as "Tellimuste Arv"
 from orders 
 left join books on books.id = orders.book_id
+where year(order_date) = 2017
+;
+select first_name as Nimi, last_name As "Perekonna nimi", price as "Kulutatud Summa"
+from clients
+left join books on books.id = clients.id
+order by price desc
+;
+select title as Nimi, count(book_id) as "Tellimuste Arv"
+from books
+left join orders on books.id = orders.book_id
+where year(order_date) = 2017
+group by book_id
+order by count(book_id) desc
+limit 10
+;
+select price as Hind
+from books
+where avg(price) < price
+group by price
