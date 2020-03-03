@@ -40,3 +40,29 @@ select price as Hind
 from books
 where avg(price) < price
 group by price
+select stock_saldo * price as "Lao väärtus"
+from books
+group by price
+order by price
+;
+Select max(price) as "Kõrgeim hind", min(price) as "Madalaim hind", avg(price) as "Keskmine hind" 
+from books
+;
+select max(price) as "Kõrgeim kasutatud raamatu hind"
+from books
+where type = "used"
+;
+select avg(price) as "Keskmine hind", stock_saldo as "hulk",
+CASE when type = "used" then "Kasutatud"
+when type = "New" then "Uus"
+else "E-raamat"
+end as "Raamatu tüüp"                    
+from books
+;
+select title, price, type
+from books
+where type = "used" and price >(select avg(price)
+from books
+where type = "new")
+order by price
+;
